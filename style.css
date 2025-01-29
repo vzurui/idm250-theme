@@ -126,58 +126,55 @@ a:visited {
   top: 0;
 }
 
-/* footer css */
-
 footer {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: center; /* Center everything horizontally */
 	text-align: center;
 	padding: 30px;
-	background-color: #f9f9f9;
-	border-top: 5px solid #EAE6E1;
+	background-color: #f9f9f9; /* Light background */
+	border-top: 5px solid #EAE6E1; /* Top border for separation */
 }
 
+/* Footer content container */
 .footer-contents {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 10px; 
+	gap: 10px; /* Spacing between elements */
 }
 
-.social-icons {
+/* Social Icons Styling */
+.footer-contents .social-icons {
 	display: flex;
-	justify-content: center; 
-	align-items: center; 
-	gap: 10px; 
-	margin-top: 10px; 
+	justify-content: center;
+	gap: 15px; /* Space between icons */
 }
 
-.footer-contents img {
-	width: 50px; 
-	height: auto;
-}
-
+/* Footer Navigation Links (Scoped) */
 .footer-contents ul {
 	display: flex;
+	justify-content: center;
 	gap: 20px;
-	list-style: none;
+	list-style: none; /* Remove bullets */
 	padding: 0;
 }
 
 .footer-contents ul li {
-	margin: 0;
+	display: inline-block;
 }
 
 .footer-contents ul li a {
 	text-decoration: none;
-	font-size: 16px;
+	font-weight: bold;
 }
 
-p {
+/* Copyright Text */
+.footer-contents p {
 	margin-top: 10px;
+	font-size: 14px;
+	color: black;
 }
-
 
 /* media queries */
 
