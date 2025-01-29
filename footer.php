@@ -12,8 +12,8 @@
   <div class=footer-contents>
   <img src="./wp-content/themes/idm250-theme/images/placeholder-circle.png">
    <div class="social-icons">
-      <img src="/wp-content/themes/idm250-theme/images/linkedin.png">
-      <img src="/wp-content/themes/idm250-theme/images/email.png">
+      <img src="./wp-content/themes/idm250-theme/images/linkedin.png">
+      <img src="./wp-content/themes/idm250-theme/images/email.png">
    </div>
   <ul>
     <li><a href="./wp-content/themes/idm250-theme/index.php">Home</a></li>
