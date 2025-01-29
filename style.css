@@ -1,4 +1,4 @@
-body {
+ /* body {
   margin: 0;
   font-family: Helvetica, sans-serif;
 }
@@ -15,7 +15,7 @@ a:visited {
 	color: #121212;
 }
 
-/* header css */
+ header css 
 
 .header {
   background-color: #F5F5F5;
@@ -52,7 +52,7 @@ a:visited {
   text-decoration: none;
 }
 
-/* hamburger menu of css  */
+ hamburger menu of css  
 
 .header .menu {
   clear: both;
@@ -60,7 +60,7 @@ a:visited {
   transition: max-height .2s ease-out;
 }
 
-/* hamburger menu icons */
+ hamburger menu icons 
 
 .header .menu-icon {
   cursor: pointer;
@@ -99,7 +99,7 @@ a:visited {
   top: -5px;
 }
 
-/* menu btns */
+ menu btns 
 
 .header .menu-btn {
   display: none;
@@ -125,11 +125,12 @@ a:visited {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
+*/
 
 footer {
 	display: flex;
 	flex-direction: column;
-	align-items: center; /* Center everything horizontally */
+	align-items: center; 
 	text-align: center;
 	padding: 30px;
 	background-color: #f9f9f9; /* Light background */
@@ -149,6 +150,11 @@ footer {
 	display: flex;
 	justify-content: center;
 	gap: 15px; /* Space between icons */
+}
+
+.footer-contents .social-icons img {
+	width: 10%;
+	height: auto;
 }
 
 /* Footer Navigation Links (Scoped) */
