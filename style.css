@@ -52,7 +52,7 @@ a:visited {
   text-decoration: none;
 }
 
- hamburger menu of css  
+ /* hamburger menu of css */
 
 .header .menu {
   clear: both;
@@ -141,14 +141,14 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 10px; /* Spacing between elements */
+	gap: 20px; 
 }
 
 /* Social Icons Styling */
 .footer-contents .social-icons {
 	display: flex;
 	justify-content: center;
-	gap: 15px; /* Space between icons */
+	gap: 15px;
 }
 
 .social-icons img {
@@ -156,12 +156,12 @@ footer {
 	height: auto;
 }
 
-.logo img {
-	height: 20px;
-	width: auto;
+.logo {
+	width: 10%;
+	height: 10%;
 }
 
-/* Footer Navigation Links (Scoped) */
+/* Footer Navigation Links */
 .footer-contents ul {
 	display: flex;
 	justify-content: center;
@@ -203,4 +203,24 @@ footer {
   .header .menu-icon {
     display: none;
   }
+}
+
+@media (max-width: 480px) {
+	.footer-contents {
+			max-width: 90%;
+			padding: 15px;
+	}
+
+	.social-icons img {
+			width: 20px;
+	}
+
+	.footer-contents ul {
+			flex-direction: row;
+			justify-content: center;
+	}
+
+	.footer-contents p {
+			font-size: 12px;
+	}
 }
