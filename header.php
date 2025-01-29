@@ -4,18 +4,15 @@
 <title>IDM 250</title>
 </head>
 <body>
-	<header>
-		<ul>
-		<li><a href="index.php">Vy Le</a></li>
-	</ul>
-		<nav>
-		<ul>
-			<li><a href="works.php">Work</a></li>
-			<li><a href="about.php">About</a></li>
-			<li><a href="resume.php">Resume</a></li>
-		</ul>
-		</nav>
-	</header>
-	<h1>idm250</h1>
+<header class="header">
+  <a href="index.php" class="logo">Vy Le</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="works.php">Work</a></li>
+    <li><a href="about.php">About</a></li>
+    <li><a href="resume.php">Resume</a></li>
+  </ul>
+</header>
 </body>
 </html>
