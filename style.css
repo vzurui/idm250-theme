@@ -3,12 +3,16 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-h2 {
-	color: blue;
-}
-
 a {
   color: #121212;
+}
+
+a:hover {
+	color: #AD4D4C;
+}
+
+a:visited {
+	color: #121212;
 }
 
 /* header css */

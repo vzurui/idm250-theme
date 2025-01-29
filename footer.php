@@ -16,10 +16,10 @@
       <img src="email.png">
    </div>
   <ul>
-    <li><a href="index.php">Home</a></li>
-     <li><a href="works.php">Work</a></li>
-    <li><a href="about.php">About</a></li>
-    <li><a href="resume.php">Resume</a></li>
+    <li><a href="./wp-content/themes/idm250-theme/index.php">Home</a></li>
+    <li><a href="./wp-content/themes/idm250-theme/footer.php">Work</a></li>
+    <li><a href="./wp-content/themes/idm250-theme/about.php">About</a></li>
+    <li><a href="./wp-content/themes/idm250-theme/resume.php">Resume</a></li>
   </ul>
   </div>
   <p>©2025</p>
