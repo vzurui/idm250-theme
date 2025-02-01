@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IDM250</title>
-<link rel="stylesheet" href="./wp-content/themes/idm250-theme/style.css">
-<title>IDM 250</title>
-</head>
-<body>
 <footer>
   <div class=footer-contents>
   <img src="./wp-content/themes/idm250-theme/images/placeholder-circle.png" class="logo">
