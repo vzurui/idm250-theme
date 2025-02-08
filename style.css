@@ -1,6 +1,8 @@
-body {
+html, body {
   margin: 0;
+  padding: 0;
   font-family: Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -65,7 +67,6 @@ a:visited {
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
   padding: 28px 20px;
   position: relative;
   user-select: none;
@@ -188,10 +189,15 @@ footer {
 
 /* single page */
 
+article {
+  margin-top: 1.5em;
+  padding: 50px;
+}
+
 .post-container {
   max-width: 800px;
   margin: auto;
-  padding: 20px;
+  padding: 50px;
   background: white;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -200,7 +206,7 @@ footer {
 .post-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .post-meta {
@@ -212,7 +218,7 @@ footer {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .post-content {
