@@ -1,7 +1,9 @@
 <?php get_header(); ?>
-<h1>Oops!</h1>
-<h1>404</h1>
-<h1>Page Not Found</h1>
+<h1 class="error-top">Oops!</h1>
 
-<a href="<?php echo home_url(); ?>" class="button">Back to Home</a>
+<div class="error-msg">
+<h1 class="error-nmbr">404 Page Not Found</h1>
+
+<a href="<?php echo home_url(); ?>" class="error-button error-link shadow-box">Back To Home</a>
+</div>
 <?php get_footer(); ?>

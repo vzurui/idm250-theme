@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   font-family: Helvetica, sans-serif;
   overflow-x: hidden;
+  background-color: EAE6E1;
 }
 
 a {
@@ -52,7 +53,7 @@ h1 {
   padding: 10px;
 }
 
-h2 {
+h2, h3, h4, h5, h6 {
 margin-top: 2em;
 }
 
@@ -236,18 +237,18 @@ footer {
 
 /* single page */
 
+
 article {
   margin-top: 1.5em;
-  padding: 50px;
+  padding: 30px;
 }
 
 .post-container {
-  max-width: 800px;
+  max-width: 2000px;
   margin: auto;
-  padding: 50px;
-  background: white;
+  padding: 30px;
+  background: #F5F5F5;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .post-title {
@@ -284,23 +285,61 @@ article {
   gap: 30px !important;
 }
 
-
-/* ✅ Reduce gap inside columns */
 .wp-block-columns {
-  gap: 4px !important; /* Adjust this value as needed */
+  gap: 4px !important;
 }
 
-/* ✅ Reduce space inside individual portfolio items */
 .wp-block-group.is-layout-flex {
-  margin-bottom: 5px !important; /* Reduce bottom space */
-  padding: 10px !important; /* Keeps content spacing */
+  margin-bottom: 5px !important;
+  padding: 10px !important;
 }
 
-/* ✅ Adjust button spacing */
 .wp-block-buttons {
-  margin-top: 8px !important; /* Moves buttons closer to content */
+  margin-top: 8px !important;
 }
 
+.error-msg {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 3em;
+}
+
+.error-top {
+  color: #AD4D4C;
+  font-style: italic;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.error-button {
+  text-align: center;
+  background-color: #EBE6E2;
+  padding: 15px 5px;
+  border-radius: 10px;
+  margin: 0 6em;
+}
+
+.error-nmbr {
+  font-size: 50px;
+  text-align: center;
+}
+
+a.error-link:visited {
+  color: #AD4D4C;
+}
+
+a.error-link:hover {
+  color: #AD4D4C;
+}
+
+.shadow-box {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2), /* Main shadow */
+  8px 8px 12px rgba(0, 0, 0, 0.15); /* X, Y, Blur, Spread, Color */
+  padding: 20px;
+  border-radius: 10px;
+}
 
 
 /* media queries */
