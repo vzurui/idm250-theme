@@ -241,14 +241,18 @@ footer {
 article {
   margin-top: 1.5em;
   padding: 30px;
+  font-size: 150%;
+  text-align: left;
+  justify-content: left;
 }
 
 .post-container {
-  max-width: 2000px;
+  max-width: 1700px;
   margin: auto;
   padding: 30px;
   background: #F5F5F5;
   border-radius: 8px;
+  text-align: left;
 }
 
 .post-title {
