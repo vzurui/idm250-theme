@@ -7,6 +7,7 @@ html, body {
 
 a {
   color: #121212;
+  font-size: 20px;
 }
 
 a:hover {
@@ -29,7 +30,6 @@ a:visited {
   padding: 20px;
 }
 
-
 section {
   padding: 60px 20px; 
 }
@@ -41,16 +41,32 @@ button, .btn {
   display: inline-block;
 }
 
+p {
+  margin: 1em;
+  font-size: 20px;
+  padding: 3px;
+}
+
 h1 {
+  margin: 0.75em;
+  padding: 10px;
+}
+
+h2 {
+margin-top: 2em;
+}
+
+.main-title {
   text-align: center;
-  padding: 30px;
+  padding: 50px;
+  margin-top: 1em;
 }
 
 /* header css */
 
 .header {
   background-color: #F5F5F5;
-  border-bottom: 2px solid #EAE6E1;
+  border-bottom: 4px solid #AD4D4C;
   position: fixed;
   top: 0;
   width: 100%;
@@ -163,8 +179,9 @@ footer {
 	align-items: center; 
 	text-align: center;
 	padding: 30px;
+  margin-top: 1em;
 	background-color: #f9f9f9; /* Light background */
-	border-top: 5px solid #EAE6E1; /* Top border for separation */
+	border-top: 5.5px solid #AD4D4C; /* Top border for separation */
 }
 
 /* Footer content container */
@@ -259,6 +276,32 @@ article {
   margin-top: 20px;
   font-style: italic;
 }
+
+.wp-block-group {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px !important;
+}
+
+
+/* ✅ Reduce gap inside columns */
+.wp-block-columns {
+  gap: 4px !important; /* Adjust this value as needed */
+}
+
+/* ✅ Reduce space inside individual portfolio items */
+.wp-block-group.is-layout-flex {
+  margin-bottom: 5px !important; /* Reduce bottom space */
+  padding: 10px !important; /* Keeps content spacing */
+}
+
+/* ✅ Adjust button spacing */
+.wp-block-buttons {
+  margin-top: 8px !important; /* Moves buttons closer to content */
+}
+
+
 
 /* media queries */
 

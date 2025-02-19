@@ -1,7 +1,6 @@
 <?php get_header(); ?> 
 
 <main class="home-page">
-    <h1>Welcome, I'm Vy.</h1> 
     
     <?php 
     
