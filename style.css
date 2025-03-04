@@ -1,12 +1,51 @@
+@font-face {
+  font-family: 'Inria-Serif';
+  src: url('fonts/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal ;
+}
+
+@font-face {
+  font-family: 'Instrument-Sans';
+  src: url('fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal ;
+}
+
+@font-face {
+  font-family: 'Instrument-Sans-bold';
+  src: url('fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal ;
+}
+
+:root {
+  --background-color-: #EAE6E1;
+  --text-color: #121212;
+  --divider: #AD4D4C;
+  --header: #F5F5F5;
+  --sub-header: #f4f4f4;
+  --serif-font: 'Inria-Serif','Courier New', Courier, monospace;
+  --sans-serif-font: 'Instrument-Sans','Courier New', Courier, monospace;
+  --sans-serif-bold: 'Instrument-Sans-bold','Courier New', Courier, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
 html, body {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
   overflow-x: hidden;
-  background-color: EAE6E1;
+  background-color: #EAE6E1;
 }
 
 a {
+  font-family: var(--serif-font);
   color: #121212;
   font-size: 20px;
 }
@@ -17,12 +56,6 @@ a:hover {
 
 a:visited {
 	color: #121212;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; 
 }
 
 .container {
@@ -43,17 +76,20 @@ button, .btn {
 }
 
 p {
+  font-family: var(--sans-serif-font);
   margin: 1em;
   font-size: 20px;
   padding: 3px;
 }
 
 h1 {
+  font-family: var(--serif-font);
   margin: 0.75em;
   padding: 10px;
 }
 
 h2, h3, h4, h5, h6 {
+font-family: var(--serif-font);
 margin-top: 2em;
 }
 
@@ -75,6 +111,7 @@ margin-top: 2em;
 }
 
 .header ul {
+  font-family: var(--serif-font);
   margin: 0;
   padding: 0;
   list-style: none;
