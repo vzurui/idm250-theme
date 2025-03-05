@@ -7,7 +7,7 @@
         <div class="grid-container"> 
             <?php while (have_posts()) : the_post(); ?>
                 <div class="grid-item">
-                    <?php get_template_part('components/case-study-card'); ?>
+                <?php include get_template_directory() . '/components/case-study-card.php'; ?>
                 </div>
             <?php endwhile; ?>
         </div>
