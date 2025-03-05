@@ -4,7 +4,7 @@
     <?php if (have_posts()) : ?>
         <h1><?php the_archive_title(); ?></h1>
 
-        <div class="grid-container">
+        <div class="grid-container"> 
             <?php while (have_posts()) : the_post(); ?>
                 <div class="grid-item">
                     <?php get_template_part('components/case-study-card'); ?>
