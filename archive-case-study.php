@@ -4,13 +4,13 @@
     <?php if (have_posts()) : ?>
         <h1><?php the_archive_title(); ?></h1>
 
-        <ul class="grid grid-3">
+        <div class="grid-container">
             <?php while (have_posts()) : the_post(); ?>
                 <div class="grid-item">
                     <?php get_template_part('components/case-study-card'); ?>
                 </div>
             <?php endwhile; ?>
-        </ul>
+        </div>
 
         <?php the_posts_pagination(); ?>
 
