@@ -78,7 +78,7 @@ button, .btn {
 p {
   font-family: var(--sans-serif-font);
   margin: 1em;
-  font-size: 20px;
+  font-size: 15px;
   padding: 3px;
 }
 
@@ -106,7 +106,7 @@ margin-top: 2em;
   border-bottom: 4px solid #AD4D4C;
   position: fixed;
   top: 0;
-  width: 97%;
+  width: 100%;
   z-index: 3;
 }
 
