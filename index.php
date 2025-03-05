@@ -6,7 +6,6 @@
             <h2 class="post-title">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
-            <p class="post-meta">Published on <?php the_date(); ?> in <?php the_category(', '); ?></p>
             <?php if (has_post_thumbnail()) : ?>
                 <a href="<?php the_permalink(); ?>">
                     <div class="post-thumbnail">

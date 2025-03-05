@@ -297,12 +297,6 @@ article {
   font-weight: bold;
   margin-bottom: 20px;
 }
-
-.post-meta {
-  color: gray;
-  font-size: 0.9rem;
-}
-
 .post-thumbnail img {
   max-width: 50%;
   height: auto;
@@ -388,10 +382,11 @@ a.error-link:hover {
 /* Grid Layout */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr)); /* Adjust for responsiveness */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive Grid */
   gap: 20px;
-  padding: 40px 0;
-  justify-content: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* Individual Case Study Card */
@@ -407,16 +402,14 @@ a.error-link:hover {
   transform: scale(1.05);
 }
 
-/* Make Sure Images are Properly Sized */
+/* Make Sure Images Are Properly Sized */
 .case-study-image img {
   width: 100%;
-  max-width: 350px;
-  height: auto;
+  height: 300px; /* Forces uniform height */
   object-fit: cover;
   border-radius: 10px;
 }
-
- /* end of archive page */
+/* end of archive page */
 
 
 /* media queries */
