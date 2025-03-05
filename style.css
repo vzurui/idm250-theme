@@ -78,20 +78,89 @@ button, .btn {
 p {
   font-family: var(--sans-serif-font);
   margin: 1em;
-  font-size: 15px;
+  font-size: 22px;
   padding: 3px;
+  line-height: 1.3;
 }
 
 h1 {
   font-family: var(--serif-font);
-  margin: 0.75em;
+  margin: 0;
   padding: 10px;
 }
 
 h2, h3, h4, h5, h6 {
 font-family: var(--serif-font);
-margin-top: 2em;
 }
+
+h5 {
+font-size: 110%;
+margin: 2em;
+}
+
+ul, ol {
+  font-family: var(--sans-serif-font);
+  margin: 1em;
+}
+
+
+
+/* about page */
+
+h4.wp-block-heading  {
+  margin: 0 1.3em;
+}
+
+h1.wp-block-heading  {
+  margin: 0 0.4em;
+}
+
+h2.wp-block-heading  {
+  margin: 2em 0 0 0;
+}
+
+h3.wp-block-heading  {
+  margin: 4em 0 0 0;
+}
+
+h6.wp-block-heading  {
+  margin: 2em 0 0 0;
+}
+
+.wp-block-columns {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 30px; 
+  text-align: center; 
+}
+
+.wp-block-column ul, 
+.wp-block-column ol {
+    list-style-position: inside; 
+    padding-left: 0;
+    margin-left: 0; 
+    display: block; 
+}
+
+.wp-block-column li {
+    display: list-item; 
+    margin-bottom: 5px; 
+}
+
+.wp-block-columns {
+    justify-content: center; 
+    gap: 40px;
+}
+
+.case-study-image img, .wp-image-187 {
+  max-width: 400px; /* Adjust width as needed */
+  height: auto;
+  border-radius: 10px; /* Optional: adds rounded corners */
+  padding: 40px 20px; /* Adds spacing inside */
+  margin: 20px 20px 20px 0; /* Adjusts spacing around the image */
+}
+
 
 .main-title {
   text-align: center;
@@ -379,14 +448,20 @@ a.error-link:hover {
 /* archive page */
 
 /* Case Studies Grid */
+.wrapper {
+  max-width: 100%; /* Ensures full-width container */
+  padding: 0 40px; /* Adds some spacing */
+}
+
 /* Case Study Grid */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-auto-rows: auto; /* Automatic row height */
-  gap: 20px; /* Space between grid items */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
   padding: 40px;
-  max-width: 1200px;
+  max-width: 90%;
   margin: auto;
 }
 
@@ -411,8 +486,9 @@ a.error-link:hover {
 /* Ensure Images Stay Uniform */
 .case-study-image img {
   width: 100%;
-  height: 300px; /* Forces uniform height */
-  object-fit: cover;
+  height: auto; /* Prevents forced stretching */
+  max-height: 350px; /* Ensures consistency */
+  object-fit: contain; /* Keeps image aspect ratio */
   border-radius: 10px;
 }
 /* end of archive page */
@@ -446,9 +522,9 @@ a.error-link:hover {
 .read-more-btn {
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 10px;
-  background-color: #AD4D4C; /* Adjust color */
-  color: black;
+  margin-top: 15px;
+  background-color: #AD4D4C; /* Change to match your theme */
+  color: white;
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
@@ -456,7 +532,7 @@ a.error-link:hover {
 }
 
 .read-more-btn:hover {
-  background-color: #8A3B3A; /* Darker shade on hover */
+  background-color: #8A3B3A; /* Slightly darker on hover */
 }
 
 
@@ -478,23 +554,29 @@ a.error-link:hover {
 
  .sidebar-page-container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1300px;
+  justify-content: space-between;
   margin: auto;
   gap: 30px;
   padding: 40px;
+  height: auto;
 }
 
 .main-content {
-  flex: 2;
-  max-width: 70%;
+  flex: 3;
+  max-width: 90%;
 }
 
 .sidebar {
   flex: 1;
-  max-width: 30%;
-  background: #f4f4f4;
-  padding: 20px;
+  max-width: 300px;
+  background: var(--background-color-);
+  padding: 40px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  line-height: 1.5;
 }
 /* end */
 
