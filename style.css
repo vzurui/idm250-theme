@@ -46,16 +46,16 @@ html, body {
 
 a {
   font-family: var(--serif-font);
-  color: #121212;
+  color: var(--text-color);
   font-size: 20px;
 }
 
 a:hover {
-	color: #AD4D4C;
+	color: var(--divider);
 }
 
 a:visited {
-	color: #121212;
+	color: var(--divider);
 }
 
 .container {
@@ -91,6 +91,11 @@ h1 {
 
 h2, h3, h4, h5, h6 {
 font-family: var(--serif-font);
+}
+
+h2 {
+  text-align: center;
+  font-size: 160%;
 }
 
 h5 {
