@@ -7,6 +7,7 @@ function create_case_study_cpt() {
         'labels'      => array('name' => 'Case Studies', 'singular_name' => 'Case Study'),
         'public'      => true,
         'has_archive' => true,
+        'show_in_rest' => true,
         'menu_icon'   => 'dashicons-portfolio',
         'supports'    => array('title', 'editor', 'thumbnail', 'excerpt'),
         'rewrite'     => array('slug' => 'case-studies'),

@@ -19,6 +19,19 @@
   font-style: normal ;
 }
 
+/*
+Theme Name: idm250-theme
+Theme URI: https://github.com/vzurui/idm250-theme
+Author: Vy Le
+Author URI: http://example.com/
+Description: This is a custom theme built for Project 1 of IDM250.
+Tags: custom, theme, project, 1
+Version: 1.0
+Requires at least: 6.1.1
+Tested up to: 6.1.1
+Requires PHP: 7.4
+*/
+
 :root {
   --background-color-: #EAE6E1;
   --text-color: #121212;
