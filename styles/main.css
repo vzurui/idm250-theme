@@ -55,7 +55,7 @@ a:hover {
 }
 
 a:visited {
-	color: var(--divider);
+	color: var(--text-color);
 }
 
 .container {

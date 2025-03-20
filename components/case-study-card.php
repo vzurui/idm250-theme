@@ -6,7 +6,6 @@
             </div>
         <?php endif; ?>
         <h2><?php the_title(); ?></h2>
-        <p style="color: red; font-weight: bold;">This is loading!</p>
 
     </a>
     <p><?php the_excerpt(); ?></p>

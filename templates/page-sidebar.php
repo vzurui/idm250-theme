@@ -1,10 +1,12 @@
 <?php
 /**
  * Template Name: Sidebar Page
+ * Template Post Type: page
  * Description: A page template with a sidebar.
  */
 get_header();
 ?>
+
 
 <div class="sidebar-page-container">
     <main class="main-content">
