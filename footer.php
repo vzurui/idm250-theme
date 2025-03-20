@@ -1,6 +1,5 @@
 <footer>
 <div class="footer-contents">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder-circle.png" alt="Placeholder Circle Image" class="logo">
     
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
