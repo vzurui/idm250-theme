@@ -16,6 +16,10 @@ function theme_scripts_and_styles() {
     wp_enqueue_style('theme-main-css', get_template_directory_uri() . '/styles/main.css', array(), time(), 'all');
 }
 add_action('wp_enqueue_scripts', 'theme_scripts_and_styles');
+/**
+ * for case study
+ */
+require get_template_directory() . '/includes/post-types.php';
 
 
 

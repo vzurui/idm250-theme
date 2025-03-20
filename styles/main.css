@@ -93,8 +93,11 @@ h2, h3, h4, h5, h6 {
 font-family: var(--serif-font);
 }
 
+h4 {
+  text-align: left;
+}
+
 h2 {
-  text-align: center;
   font-size: 160%;
 }
 
@@ -108,9 +111,22 @@ ul, ol {
   margin: 1em;
 }
 
+.featured-image {
+  display: flex;
+  justify-content: center; /* Centers image horizontally */
+  align-items: center; /* Centers image vertically if needed */
+  text-align: center;
+  margin-bottom: 20px; /* Adds spacing below image */
+}
 
-
-/* about page */
+.featured-image img {
+  max-width: 100%; /* Makes it responsive */
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* about page 
 
 h4.wp-block-heading  {
   margin: 0 1.3em;
@@ -131,6 +147,7 @@ h3.wp-block-heading  {
 h6.wp-block-heading  {
   margin: 2em 0 0 0;
 }
+*/
 
 .wp-block-columns {
   display: flex;

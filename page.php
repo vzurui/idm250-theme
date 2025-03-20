@@ -1,7 +1,16 @@
 <?php get_header(); ?> 
 
 <main class="page-content container">
-    <h1><?php the_title(); ?></h1>
+<?php if (has_post_thumbnail()) : ?>
+        <div class="featured-image">
+            <?php the_post_thumbnail('large'); ?>
+        </div>
+    <?php endif; ?>
+    <?php if (!is_page('about')) : ?>
+        <h1><?php the_title(); ?></h1>
+    <?php endif; ?>
+
+
 
     <?php 
     if ( have_posts() ) : 
