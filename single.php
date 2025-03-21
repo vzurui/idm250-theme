@@ -3,7 +3,6 @@
 <main class="post-container">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="post">
-            <h1 class="post-title"><?php the_title(); ?></h1>
             
             <?php if (has_post_thumbnail()) : ?>
                 <div class="post-thumbnail">

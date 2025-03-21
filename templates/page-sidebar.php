@@ -36,10 +36,12 @@ get_header();
     <aside class="sidebar">
         <h2>Quick Links</h2>
         <ul>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
+        <ul>
+            <li><a href="<?php echo site_url('/'); ?>">Home</a></li>
+            <li><a href="<?php echo site_url('/projects'); ?>">Work</a></li>
+            <li><a href="<?php echo site_url('/about/'); ?>">About</a></li>
+            <li><a href="<?php echo site_url('/resume/'); ?>">Resume</a></li>
+            <li><a href="<?php echo get_post_type_archive_link('case_study'); ?>">Case Study Archive</a></li>
         </ul>
     </aside>
 </div>

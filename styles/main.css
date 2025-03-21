@@ -83,27 +83,48 @@ p {
   line-height: 1.3;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--serif-font);
+  }
+
+h1 {
   margin: 0;
   padding: 10px;
 }
 
-h2, h3, h4, h5, h6 {
-font-family: var(--serif-font);
+h2 {
+  margin-top: 2em;
+  font-size: 160%;
+}
+
+h2.wp-block-heading {
+  text-align: left;
+}
+
+h2.wp-block-heading.has-text-align-center {
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+  padding: 10px;
 }
 
 h4 {
   text-align: left;
-}
-
-h2 {
-  font-size: 160%;
+  padding: 10px;
 }
 
 h5 {
-font-size: 110%;
-margin: 2em;
+  font-size: 110%;
+  margin-bottom: 2em;
+  padding: 10px;
+  text-align: left;
+}
+
+h6 {
+  padding: 10px;
+  margin-top: 1em;
 }
 
 ul, ol {
@@ -111,43 +132,81 @@ ul, ol {
   margin: 1em;
 }
 
+li {
+  line-height: 1.7;
+  text-align: left;
+}
+
+table {
+  margin: 20px auto; 
+  border-collapse: collapse;
+}
+
+/* featured images */
+
 .featured-image {
   display: flex;
-  justify-content: center; /* Centers image horizontally */
-  align-items: center; /* Centers image vertically if needed */
+  justify-content: center; 
+  align-items: center; 
   text-align: center;
-  margin-bottom: 20px; /* Adds spacing below image */
+  margin-bottom: 20px; 
 }
 
 .featured-image img {
-  max-width: 100%; /* Makes it responsive */
+  max-width: 100%; 
   width: auto;
   height: auto;
   display: block;
   margin: 0 auto;
 }
-/* about page 
 
-h4.wp-block-heading  {
-  margin: 0 1.3em;
+.case-study-image img, .wp-image-187 {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px; 
+  padding: 40px 20px; 
+  margin: 20px 20px 20px 0; 
 }
 
-h1.wp-block-heading  {
-  margin: 0 0.4em;
+/* buttons */
+
+.wp-block-button {
+  display: flex;
+  justify-content: center; 
+  margin-top: 5em; 
 }
 
-h2.wp-block-heading  {
-  margin: 2em 0 0 0;
+.wp-block-button__link {
+  background-color: var(--divider);
+  color: #FFF; 
+  font-size: 18px;
+  font-family: var(--serif-font);
+  padding: 14px 30px;
+  border-radius: 50px; 
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
-h3.wp-block-heading  {
-  margin: 4em 0 0 0;
+/* Hover & Focus Effects */
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-h6.wp-block-heading  {
-  margin: 2em 0 0 0;
+/* Active State */
+.wp-block-button__link:active {
+  transform: translateY(0);
 }
-*/
+
+/* makes more bold */
+.wp-block-button__link:focus-visible {
+  outline: 3px solid #FFF;
+  outline-offset: 3px;
+}
+
+/* about page */
 
 .wp-block-columns {
   display: flex;
@@ -175,22 +234,13 @@ h6.wp-block-heading  {
     gap: 40px;
 }
 
-.case-study-image img, .wp-image-187 {
-  max-width: 400px; /* Adjust width as needed */
-  height: auto;
-  border-radius: 10px; /* Optional: adds rounded corners */
-  padding: 40px 20px; /* Adds spacing inside */
-  margin: 20px 20px 20px 0; /* Adjusts spacing around the image */
-}
-
-
 .main-title {
   text-align: center;
   padding: 50px;
   margin-top: 1em;
 }
 
-/* header css */
+/* header stylings */
 
 .header {
   background-color: #F5F5F5;
@@ -229,7 +279,7 @@ h6.wp-block-heading  {
   text-decoration: none;
 }
 
- /* hamburger menu of css */
+ /* hamburger menu */
 
 .header .menu {
   clear: both;
@@ -243,7 +293,8 @@ h6.wp-block-heading  {
   cursor: pointer;
   display: inline-block;
   padding: 28px 20px;
-  position: relative;
+  right: 5px;
+  position: absolute;
   user-select: none;
 }
 
@@ -275,7 +326,7 @@ h6.wp-block-heading  {
   top: -5px;
 }
 
-/* menu btns */
+/* menu btns and text */
 
 .header .menu-btn {
   display: none;
@@ -302,6 +353,8 @@ h6.wp-block-heading  {
   top: 0;
 }
 
+/* footer */
+
 footer {
 	display: flex;
 	flex-direction: column;
@@ -309,7 +362,7 @@ footer {
 	text-align: center;
 	padding: 30px;
   margin-top: 1em;
-	background-color: #f9f9f9; /* Light background */
+	background-color: #f9f9f9; 
 	border-top: 5.5px solid #AD4D4C; /* Top border for separation */
 }
 
@@ -343,7 +396,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	gap: 20px;
-	list-style: none; /* Remove bullets */
+	list-style: none;
 	padding: 0;
 }
 
@@ -363,8 +416,7 @@ footer {
 	color: black;
 }
 
-/* single page */
-
+/* single and custom page template */
 
 article {
   margin-top: 1.5em;
@@ -461,18 +513,18 @@ a.error-link:hover {
 }
 
 .shadow-box {
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2), /* Main shadow */
-  8px 8px 12px rgba(0, 0, 0, 0.15); /* X, Y, Blur, Spread, Color */
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2),
+  8px 8px 12px rgba(0, 0, 0, 0.15); 
   padding: 20px;
   border-radius: 10px;
 }
 
-/* archive page */
+/* archive page template */
 
 /* Case Studies Grid */
 .wrapper {
-  max-width: 100%; /* Ensures full-width container */
-  padding: 0 40px; /* Adds some spacing */
+  max-width: 100%; 
+  padding: 0 40px; 
 }
 
 /* Case Study Grid */
@@ -488,13 +540,13 @@ a.error-link:hover {
 }
 
 
-/* Individual Case Study Card */
+/* Individual Case Study Card For grid */
 .grid-item {
   background: #fafafa;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  min-height: 400px; /* Prevents items from collapsing */
+  min-height: 400px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -508,14 +560,31 @@ a.error-link:hover {
 /* Ensure Images Stay Uniform */
 .case-study-image img {
   width: 100%;
-  height: auto; /* Prevents forced stretching */
-  max-height: 350px; /* Ensures consistency */
-  object-fit: contain; /* Keeps image aspect ratio */
+  height: auto; 
+  max-height: 350px; 
+  object-fit: contain; 
   border-radius: 10px;
 }
+
+.read-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #AD4D4C;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #8A3B3A; /* Slightly darker on hover */
+}
+
 /* end of archive page */
 
-/* variation */
+/* side bar page template */
 
 .case-study-container {
   display: flex;
@@ -540,39 +609,6 @@ a.error-link:hover {
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-.read-more-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 15px;
-  background-color: #AD4D4C; /* Change to match your theme */
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.read-more-btn:hover {
-  background-color: #8A3B3A; /* Slightly darker on hover */
-}
-
-
-/* Make it stack on mobile */
-@media (max-width: 768px) {
-  .case-study-container {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .case-study-content, .case-study-sidebar {
-      max-width: 100%;
-  }
-}
- /* end */
-
-
- /* side bar page template */
 
  .sidebar-page-container {
   display: flex;
@@ -603,6 +639,17 @@ a.error-link:hover {
 /* end */
 
 /* media queries */
+
+@media (max-width: 768px) {
+  .case-study-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .case-study-content, .case-study-sidebar {
+      max-width: 100%;
+  }
+}
 
 @media (min-width: 48em) {
   .header li {
@@ -640,3 +687,49 @@ a.error-link:hover {
 			font-size: 12px;
 	}
 }
+
+/* 📌 Adjustments for Tablets (Max-width: 1024px) */
+@media (max-width: 1024px) {
+  .header .menu-icon {
+      padding: 20px;
+  }
+
+  .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+  }
+
+  h1, h2 {
+      font-size: 1.8rem;
+  }
+}
+
+/* 📌 Adjustments for Mobile (Max-width: 768px) */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .header .menu-icon {
+      position: absolute;
+      right: 15px; /* Moves hamburger menu to the right */
+      top: 20px;
+  }
+
+  .grid-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  button, .wp-block-button {
+      width: 100%;
+      padding: 12px;
+  }
+
+  h1, h2 {
+      font-size: 1.5rem;
+  }
+}
+
