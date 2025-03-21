@@ -10,14 +10,23 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="header">
-<a href="<?php echo home_url(); ?>" class="logo">Vy Le</a>
-  <input class="menu-btn" type="checkbox" id="menu-btn" />
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-  <ul class="menu">
-        <li><a href="<?php echo site_url('/projects/'); ?>">Work</a></li>
-        <li><a href="<?php echo site_url('/about'); ?>">About</a></li>
-        <li><a href="<?php echo site_url('/resume'); ?>">Resume</a></li>
-    </ul>
-  </header>
+    <a href="<?php echo home_url(); ?>" class="logo">Vy Le</a>
+
+    <input class="menu-btn" type="checkbox" id="menu-btn">
+    
+    <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span>
+    </label>
+
+    <nav class="menu">
+        <?php 
+            wp_nav_menu(array(
+                'theme_location' => 'primary-menu',
+                'container'      => false,
+                'menu_class'     => 'menu-list',
+            ));
+        ?>
+    </nav>
+</header>
 </body>
 </html>

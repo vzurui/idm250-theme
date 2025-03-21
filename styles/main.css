@@ -241,115 +241,123 @@ table {
 }
 
 /* header stylings */
-
 .header {
-  background-color: #F5F5F5;
-  border-bottom: 4px solid #AD4D4C;
-  position: fixed;
+  background-color: var(--header);
+  border-bottom: 4px solid var(--divider);
   top: 0;
   width: 100%;
-  z-index: 3;
-}
-
-.header ul {
-  font-family: var(--serif-font);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: #F5F5F5;
-}
-
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
-}
-
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 1.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
+  position: relative; 
+    z-index: 10;
+}
+
+/* name in header */
+.header .logo {
+  font-size: 1.8em;
   text-decoration: none;
 }
 
- /* hamburger menu */
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
+/* nav menu drop down*/
+.menu {
+  width: 100%;
+  background: var(--header);
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  display: none; 
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 0;
 }
 
-/* hamburger menu icons */
+/* Menu buttons */
+.menu a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+.menu, .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-.header .menu-icon {
+.menu li {
+  margin: 0;
+  display: block;
+  padding: 10px 0;
+}
+
+/* Hover state */
+.menu li a:hover {
+  color: var(--divider); 
+}
+
+
+/* hamburger menu */
+.menu-icon {
   cursor: pointer;
   display: inline-block;
   padding: 28px 20px;
-  right: 5px;
   position: absolute;
+  right: 20px;
+  top: 10px;
   user-select: none;
 }
 
-.header .menu-icon .navicon {
+.menu-icon .navicon {
   background: #333;
   display: block;
   height: 2px;
   position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
+  transition: background 0.3s ease-out;
+  width: 22px;
 }
 
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
   background: #333;
   content: '';
   display: block;
   height: 100%;
   position: absolute;
-  transition: all .2s ease-out;
+  transition: all 0.3s ease-out;
   width: 100%;
 }
 
-.header .menu-icon .navicon:before {
-  top: 5px;
+.menu-icon .navicon:before {
+  top: 6px;
 }
 
-.header .menu-icon .navicon:after {
-  top: -5px;
+.menu-icon .navicon:after {
+  top: -6px;
 }
 
-/* menu btns and text */
-
-.header .menu-btn {
+.menu-btn {
   display: none;
 }
 
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+.menu-btn:checked ~ .menu {
+  display: flex; /* Show menu */
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+
+.menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
+  top: 0;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
@@ -363,7 +371,7 @@ footer {
 	padding: 30px;
   margin-top: 1em;
 	background-color: #f9f9f9; 
-	border-top: 5.5px solid #AD4D4C; /* Top border for separation */
+	border-top: 5.5px solid var(--divider); 
 }
 
 /* Footer content container */
@@ -640,96 +648,146 @@ a.error-link:hover {
 
 /* media queries */
 
-@media (max-width: 768px) {
-  .case-study-container {
-      flex-direction: column;
-      text-align: center;
+/* ------------------- */
+/* Max-width: 480px — Mobile */
+/* ------------------- */
+@media (max-width: 480px) {
+  .footer-contents {
+    max-width: 90%;
+    padding: 15px;
   }
 
-  .case-study-content, .case-study-sidebar {
-      max-width: 100%;
+  .social-icons img {
+    width: 20px;
+  }
+
+  .footer-contents ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer-contents p {
+    font-size: 12px;
   }
 }
 
+/* ------------------- */
+/* Max-width: 768px — Tablet and below */
+/* ------------------- */
+@media (max-width: 768px) {
+  .case-study-container,
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .case-study-content,
+  .case-study-sidebar {
+    max-width: 100%;
+  }
+
+  .header .menu-icon {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    padding: 20px;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  button,
+  .wp-block-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .wp-block-button {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Ensure text is centered within the button */
+  .wp-block-button__link {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+/* ------------------- */
+/* Max-width: 1024px — Small Desktop */
+/* ------------------- */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ------------------- */
+/* Min-width: 48em (768px) — Tablet and up */
+/* ------------------- */
 @media (min-width: 48em) {
   .header li {
     float: left;
   }
+
   .header li a {
     padding: 20px 30px;
   }
+
   .header .menu {
     clear: none;
     float: right;
     max-height: none;
   }
+
   .header .menu-icon {
     display: none;
   }
 }
 
-@media (max-width: 480px) {
-	.footer-contents {
-			max-width: 90%;
-			padding: 15px;
-	}
-
-	.social-icons img {
-			width: 20px;
-	}
-
-	.footer-contents ul {
-			flex-direction: row;
-			justify-content: center;
-	}
-
-	.footer-contents p {
-			font-size: 12px;
-	}
-}
-
-/* 📌 Adjustments for Tablets (Max-width: 1024px) */
-@media (max-width: 1024px) {
-  .header .menu-icon {
-      padding: 20px;
-  }
-
-  .grid-container {
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-  }
-
-  h1, h2 {
-      font-size: 1.8rem;
-  }
-}
-
-/* 📌 Adjustments for Mobile (Max-width: 768px) */
-@media (max-width: 768px) {
+/* ------------------- */
+/* Min-width: 768px — Larger tablets and up */
+/* ------------------- */
+@media (min-width: 768px) {
   .header {
-      flex-direction: column;
-      text-align: center;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .header .menu-icon {
-      position: absolute;
-      right: 15px; /* Moves hamburger menu to the right */
-      top: 20px;
+  .menu {
+    display: flex !important;
+    position: static;
+    flex-direction: column;
+    width: auto;
+    background: none;
+    padding: 0;
   }
 
-  .grid-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .menu a {
+    padding: 15px 20px;
   }
 
-  button, .wp-block-button {
-      width: 100%;
-      padding: 12px;
-  }
-
-  h1, h2 {
-      font-size: 1.5rem;
+  .menu-icon {
+    display: none;
   }
 }
+
+
 
